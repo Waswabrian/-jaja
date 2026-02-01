@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | StyleHub</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tshirt"></i>
+                <span>StyleHub</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="login.html" class="auth-link">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </a>
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Products Page Content -->
+    <main class="products-page">
+        <div class="container">
+            <h1 class="page-title">Our Collection</h1>
+            <p class="page-subtitle">Discover our exclusive selection of 12 premium clothing items</p>
+            
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label class="filter-option">
+                                <input type="checkbox" value="t-shirts">
+                                <span>T-Shirts</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="shirts">
+                                <span>Shirts</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="pants">
+                                <span>Pants</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="jackets">
+                                <span>Jackets</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="dresses">
+                                <span>Dresses</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-range">
+                            <input type="range" min="0" max="200" value="200" class="price-slider" id="price-slider">
+                            <div class="price-values">
+                                <span>$0</span>
+                                <span>$200</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Colors</h3>
+                        <div class="color-options">
+                            <button class="color-option" data-color="black" style="background-color: #000;"></button>
+                            <button class="color-option" data-color="white" style="background-color: #fff; border: 1px solid #ddd;"></button>
+                            <button class="color-option" data-color="blue" style="background-color: #1A3A5F;"></button>
+                            <button class="color-option" data-color="red" style="background-color: #FF6B6B;"></button>
+                            <button class="color-option" data-color="green" style="background-color: #28a745;"></button>
+                            <button class="color-option" data-color="gray" style="background-color: #6c757d;"></button>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-primary apply-filters">Apply Filters</button>
+                    <button class="btn btn-secondary clear-filters">Clear All</button>
+                </aside>
+                
+                <!-- Products Grid -->
+                <section class="products-section">
+                    <div class="products-header">
+                        <p id="product-count">12 Products</p>
+                        <select class="sort-select">
+                            <option value="default">Sort by Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name A-Z</option>
+                        </select>
+                    </div>
+                    
+                    <div class="products-grid" id="all-products">
+                        <!-- All products will be loaded here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>StyleHub</h3>
+                    <p>Elevating fashion with premium quality clothing since 2024.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="products.html">Products</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Returns & Exchanges</a>
+                    <a href="#">Size Guide</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fashion St, Style City</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@stylehub.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/products.js"></script>
+</body>
+</html>

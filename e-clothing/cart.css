@@ -1,0 +1,17 @@
+/* Product Cards in Cart Page */
+.recommended-products .product-card {
+    margin-bottom: 0;
+}
+
+.recommended-products .product-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.recommended-products .btn-add-to-cart {
+    width: 100%;
+}
+
+.recommended-products .btn-wishlist {
+    width: 100%;
+}
